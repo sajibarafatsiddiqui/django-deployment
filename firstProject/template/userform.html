@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{%extends "index.html"%}
+
+<body>
+{%block body_block%}
+<div class="container">
+<h1>Please Provide Your Valuable Remarks Below</h1>
+<form method="POST">
+  {{ form.as_p }}
+  {% csrf_token %}
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+</div>
+{% endblock %}
+
+
+</body>
+</html>

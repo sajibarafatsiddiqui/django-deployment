@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{%extends "index.html"%}
+<body>
+{% block body_block%}
+<div class="container">
+<h1>List of User Credentials</h1>
+<div class="user">
+  {% if userList %}
+  <ol>
+    {% for names in userList %}
+    <li>Userinfo</li>
+    <ul>
+
+      <li>{{names.firstName}}</li>
+      <li>{{names.lastName}}</li>
+      <li>{{names.email}}</li>
+      </ul>
+
+    {% endfor %}
+    </ol>
+
+  {% else %}
+  <p>No user available </p>
+  {% endif %}
+</div>
+</div>
+{% endblock %}
+
+</body>
+</html>
